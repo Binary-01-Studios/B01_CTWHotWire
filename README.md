@@ -12,7 +12,6 @@ Example:
 ```lua
 Citizen.CreateThread(function()
 	local example = exports['B01_CTWHotWire']:startMinigame(15000)
-	Citizen.Wait(15000)
 	print(example)
 end)
 ```
