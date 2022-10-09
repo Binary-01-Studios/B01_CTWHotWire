@@ -2,13 +2,13 @@
 
 A car screwdriver hot wire minigame inspired by the GTA Chinatown Wars minigame.
 
-Exports List:
+**Exports List:**
 ```lua
 exports['B01_CTWHotWire']:startMinigame(duration)
 exports['B01_CTWHotWire']:stopMinigame(duration)
 ```
 
-Example:
+**Example:**
 ```lua
 Citizen.CreateThread(function()
 	local example = exports['B01_CTWHotWire']:startMinigame(15000)
