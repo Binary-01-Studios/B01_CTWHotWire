@@ -2,16 +2,16 @@
 
 B01_CTWHotWire
 
-Exports List:
-exports['B01_CTWHotWire']:startMinigame()
+Exports List:<br />
+exports['B01_CTWHotWire']:startMinigame()<br />
 exports['B01_CTWHotWire']:stopMinigame()
 
-Example:
-Citizen.CreateThread(function()
-	local example = exports['B01_CTWHotWire']:startMinigame() 
-	Citizen.Wait(15000)
-	print(example)
-end)
+Example:<br />
+Citizen.CreateThread(function()<br />
+	local example = exports['B01_CTWHotWire']:startMinigame() <br />
+	Citizen.Wait(15000)<br />
+	print(example)<br />
+end)<br />
 
 Value returned is a boolean
 
