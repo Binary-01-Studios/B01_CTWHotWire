@@ -1,19 +1,23 @@
 # B01_CTWHotWire
 
-B01_CTWHotWire
+A car screwdriver hot wire minigame inspired by the GTA Chinatown Wars minigame.
 
-Exports List:<br />
-exports['B01_CTWHotWire']:startMinigame()<br />
-exports['B01_CTWHotWire']:stopMinigame()
+Exports List:
+```lua
+exports['B01_CTWHotWire']:startMinigame(duration)
+exports['B01_CTWHotWire']:stopMinigame(duration)
+```
 
-Example:<br />
-Citizen.CreateThread(function()<br />
-	local example = exports['B01_CTWHotWire']:startMinigame() <br />
-	Citizen.Wait(15000)<br />
-	print(example)<br />
-end)<br />
+Example:
+```lua
+Citizen.CreateThread(function()
+	local example = exports['B01_CTWHotWire']:startMinigame()
+	Citizen.Wait(15000)
+	print(example)
+end)
+```
 
-Value returned is a boolean
+Value returned is a boolean by the export is a boolean.
 
-Support Discord:
+**Support Discord:** 
 http://www.discord.binary01studios.xyz/
