@@ -11,7 +11,7 @@ exports['B01_CTWHotWire']:stopMinigame(duration)
 Example:
 ```lua
 Citizen.CreateThread(function()
-	local example = exports['B01_CTWHotWire']:startMinigame()
+	local example = exports['B01_CTWHotWire']:startMinigame(15000)
 	Citizen.Wait(15000)
 	print(example)
 end)
