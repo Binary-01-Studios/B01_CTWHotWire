@@ -8,10 +8,11 @@ RegisterNUICallback("result", function(data, cb)
     inMinigame = false
 end)
 
-startMinigame = function()
+startMinigame = function(duration)
     SetNuiFocus(true,true)
     SendNUIMessage({
         type = "start",
+        duration = duration
     })
     inMinigame = true
 

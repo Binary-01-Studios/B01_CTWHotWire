@@ -86,23 +86,24 @@ function update() {
     }
 }
 
-function startGame() {
+function startGame(ms) {
     if (inminigame) return
     inminigame = true
     $("#main").css("right", "0vw")
-    var currentWidth = 0
+    $("#timerBar").css("transition", "width "+ms+"ms linear")
+    $("#timerBar").css("width","100%")
     interval = setInterval(function() {
-        $("#timerBar").css("width", currentWidth + 23.5 / 100 + "vw")
-        currentWidth = currentWidth + 23.5 / 1000
-        if (currentWidth >= 24) {
+        if ((100 * Number($("#timerBar").css("width").replace('px',"")) / window.innerWidth) >= 23.45) {
             $.post('http://b01_ctwhotwire/result', JSON.stringify({result: false}));
             stopMinigame()
             clearInterval(interval)
+            console.log("failed")
         }
         if (finished) {
             $("#main").css("background-image","url(./assets/LitUpDashboard.png)")
             $.post('http://b01_ctwhotwire/result', JSON.stringify({result: true}));
             clearInterval(interval)
+            console.log("finished")
         }
     }, 10)
 }
@@ -120,7 +121,8 @@ function stopMinigame() {
         $("#bigScrewdriver").css("top", "14vw")
         $("#bigScrewdriver").css("left", "-3.5vw")
         $("#bigScrewdriver").css("pointer-events", "all")
-        $("#timerBar").css("width", "0.0vw")
+        $("#timerBar").css("transition", "none")
+        $("#timerBar").css("width","0%")
         $("#bigScrewdriver").show()
         $("#smallScrewdriver").hide()
         $("#crackedKeyHole").hide()
@@ -155,7 +157,7 @@ $(document).ready(function() {
     window.addEventListener('message', function(event) {
         var data = event.data
         if (data.type == "start"){
-            startGame()
+            startGame(data.duration)
         }
         if (data.type == "stop"){
             stopMinigame()

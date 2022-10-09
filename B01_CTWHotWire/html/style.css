@@ -97,11 +97,12 @@ html {
 .timerBar {
     position: absolute;
     z-index: 15;
-    width: 0.0vw;
+    width: 0%;
     max-width: 23.5vw;
     height: 1.5vw;
     bottom: 0.5vw;
     left: 0.75vw;
+    transition: none;
     background: linear-gradient(180deg, rgba(104,158,106,1) 0%, rgba(90,161,94,1) 10%, rgba(46,142,54,1) 20%, rgba(14,123,23,1) 30%, rgba(0,112,2,1) 40%, rgba(0,94,1,1) 50%, rgba(0,66,0,1) 60%, rgba(0,41,3,1) 70%, rgba(25,34,28,1) 80%, rgba(7,23,12,1) 90%);
     border-radius: 2.0vw;
 }
