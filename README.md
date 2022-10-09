@@ -13,3 +13,6 @@ Example
 local example = exports['B01_CTWHotWire']:startMinigame() print(example)
 
 Value returned is a boolean
+
+Support Discord:
+http://www.discord.binary01studios.xyz/
